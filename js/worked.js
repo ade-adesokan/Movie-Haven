@@ -1,12 +1,11 @@
 var url = "http://www.myapifilms.com/imdb";
 
-var name = 'inception';
 
-var title = 
+
 
 settings = {
-  title: 'inception'
-  data: 'format=JSONP&trailer=1',
+  
+  data: 'title=inception&format=JSONP&trailer=1',
   dataType:  'jsonp',
   success:   function (response) {
     var plot = '<p>' + response[0].plot + '</p>';

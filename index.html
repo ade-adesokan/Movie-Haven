@@ -6,10 +6,17 @@
 
 </head>
 <body>
-  <input type= 'text' id= 'searchField'>
-  <input type = "button" value = "Submit" id ="searchButton">
+  <header>
+    <label for='searchField'>Movie Title: </label>
+    <input type= 'text' id= 'searchField'>
+    <input type = "button" value = "Search" id ="searchButton">
+  </header>
+  <div id ="loading">
+    <h2>Loading....</h2>
+  </div>
   <div id= 'container'>
   </div>
+
   <script src= 'js/jquery-2.1.1.js'></script>
   <script src= 'js/app.js'></script>
 </body>  
