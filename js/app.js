@@ -21,16 +21,16 @@ searchButton.click(function(){
       movieInfo += '<p>' + response[0].plot + '</p>' +'</div>';
       
       //Directors name
-      movieInfo+= '<div id = "content">'+'<p>Director: '+response[0].directors[0].name+'</p>';
+      movieInfo+= '<div id = "content">'+'<p><span>Director:</span> '+response[0].directors[0].name+'</p>';
       //List of actors 
       movieInfo+= '<h3>Actors</h3>';
       movieInfo += '<ul id = "actorsList">';
       for (var i =0; i< response[0].actors.length; i++ ) {
-        movieInfo+= '<li>'+response[0].actors[i].actorName+' as '+response[0].actors[i].character+ '</li>';
+        movieInfo+= '<li>'+response[0].actors[i].actorName+' as <span>'+response[0].actors[i].character+ '</span>'+'</li>';
       }
       movieInfo += '</ul>';
       //year of movie
-      movieInfo += '<p>Year of Movie: '+response[0].year+'</p>';
+      movieInfo += '<p><span>Year of Movie:</span> '+response[0].year+'</p>';
       //Location
       movieInfo += '<h3>Locations'+'</h3>';
       movieInfo += '<ol id = "locations">';
@@ -46,12 +46,15 @@ searchButton.click(function(){
       }
       movieInfo += '</ol>'; 
       //rating
-      movieInfo += '<p>Rating: '+response[0].rating+'</p>'+'</div>';
+      movieInfo += '<p><span>Rating:</span> '+response[0].rating+'</p>'+'</div>';
+      //background
+      var backgroundImage = response[0].urlPoster;     
       
       $('#loading').hide();   
-      
+
       $('#container').html(movieInfo);//show movie info
       $('#container').show();
+      $('body').css('background-image', response[0].urlPoster);
     }
   }
   $.ajax(url, settings);
