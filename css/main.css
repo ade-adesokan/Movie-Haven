@@ -79,6 +79,12 @@ header {
 #searchButton {
   width: 10%;
   height: 2em;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#searchButton:hover {
+  opacity: 1;
 }
 
 #container {
