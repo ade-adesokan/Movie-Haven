@@ -4,6 +4,7 @@ var searchButton = $('#searchButton');
 var url = "http://www.myapifilms.com/imdb";
 
 searchButton.click(function(){
+  searchField.prop('disabled', true);
   $('#loading').show();
   var name = searchField.val();
   settings = {
@@ -47,14 +48,15 @@ searchButton.click(function(){
       movieInfo += '</ol>'; 
       //rating
       movieInfo += '<p><span>Rating:</span> '+response[0].rating+'</p>'+'</div>';
-      //background
-      var backgroundImage = response[0].urlPoster;     
+      
       
       $('#loading').hide();   
-
+      searchField.prop('disabled', false);
       $('#container').html(movieInfo);//show movie info
       $('#container').show();
-      $('body').css('background-image', response[0].urlPoster);
+      $('html').css('height', '100%')
+      $('html').css('background', 'url("../images/backgroundImage.jpg") no-repeat');
+     
     }
   }
   $.ajax(url, settings);
