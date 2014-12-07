@@ -10,6 +10,7 @@ var movieHaven = {
   disableSearch : function () {
     movieHaven.searchField.prop('disabled', true);
     $('#loading').show();
+    $('#intro').hide();
   },
 
   //To remove loading bar after movie is found and to enable search bar again
