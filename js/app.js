@@ -11,6 +11,8 @@ searchButton.click(function(){
   
     data: 'title="'+name+'"&format=JSONP&actors=S&trailer=1',
     dataType:  'jsonp',
+
+    
     success:   function (response) {
       var videoURL = response[0].trailer.videoURL+"/imdb/embed?autoplay=false&width=480";
       //heading of movie
@@ -58,9 +60,10 @@ searchButton.click(function(){
       $('html').css('background', 'url("../images/backgroundImage.jpg") no-repeat');
      
     }
+
+    
   }
   $.ajax(url, settings);
-
-
+  
 });
 
