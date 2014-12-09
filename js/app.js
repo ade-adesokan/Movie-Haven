@@ -92,8 +92,8 @@ var movieHaven = {
         $('#container').html(this.movieInfo);
         $('#container').show();
         //movie info styles
-        $('html').css('height', '100%')
-        
+       
+       
       },
 
       //Success Method
@@ -139,5 +139,5 @@ var movieHaven = {
 movieHaven.searchButton.click( function () {
   movieHaven.execute();
 });
-
+$('html').css('background', 'url("../images/image1.jpg") no-repeat');
 
