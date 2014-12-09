@@ -91,9 +91,7 @@ var movieHaven = {
       showMovieInfo : function () {
         $('#container').html(this.movieInfo);
         $('#container').show();
-        //movie info styles
-        $('html').css('height', '100%')
-        $('html').css('background', 'url("../images/image1.jpg") no-repeat');
+        
       },
 
       //Success Method
