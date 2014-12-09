@@ -50,12 +50,14 @@ table {
 /*Main CSS Code*/
 
 html {
+  padding-bottom: 7em;
   margin: 0;
-  height: 100%;
   background: url("../images/image1.jpg") no-repeat ;
   background-size: 100% 100%;
-  position: relative;
-}
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+ }
  
 
 
@@ -97,9 +99,7 @@ header {
 
 #container {
   color: white;
-  margin: 2em 10% 5%;
-  background-color: rgba(0,0,200,0.2);
-  position: absolute;
+  margin: 2em 10% 5%; 
   padding: 2em;
   display: none;
 }

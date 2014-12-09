@@ -139,5 +139,4 @@ var movieHaven = {
 movieHaven.searchButton.click( function () {
   movieHaven.execute();
 });
-$('html').css('background', 'url("../images/image1.jpg") no-repeat');
 
