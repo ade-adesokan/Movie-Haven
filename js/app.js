@@ -91,6 +91,8 @@ var movieHaven = {
       showMovieInfo : function () {
         $('#container').html(this.movieInfo);
         $('#container').show();
+        //movie info styles
+        $('html').css('height', '100%')
         
       },
 
