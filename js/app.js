@@ -93,7 +93,7 @@ var movieHaven = {
         $('#container').show();
         //movie info styles
         $('html').css('height', '100%')
-        $('html').css('background', 'url("../images/backgroundImage.jpg") no-repeat');
+        $('html').css('background', 'url("../images/image1.jpg") no-repeat');
       },
 
       //Success Method
